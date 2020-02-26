@@ -90,6 +90,18 @@ h1 {
   .page-nav-wrap input:checked~#page-nav {
     display: flex;
   }
+  .feature{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    
+    
+  }
+  aside, picture{
+    width:30%;
+    height: 45vh;
+  }
+  
 }
 
 .gap {
@@ -124,4 +136,8 @@ h1 {
 
 .blue {
   background-color: dodgerblue;
+}
+
+.alpha {
+  background-color: lightgray;
 }
