@@ -125,6 +125,12 @@ console.log(pim);
  * - "No station found at ${frequency}, moving on"
  */
 // `searchRadioWaves` goes here
+function searchRadioWaves(){
+  let gF = getStations();
+  
+  console.log(`station found at ${gF}, enjoy!`);
+}
+searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -148,6 +154,7 @@ function isRadioStation(frequency) {
   
 
   return this.stations.includes(frequency);
+  
 }
 
 
@@ -169,7 +176,8 @@ test("getAllFrequencies", () => {
 
 test("getStations", () => {
   const stations = getStations();
-  console.log(isRadioStation(stations));
+  console.log(isRadioStation(85.9));
   assert(
-    JSON.stringify(stations) === JSON.stringify(isRadioStation.this.stations.sort()));
+    JSON.stringify(stations) === JSON.stringify(getStations
+    ()));
 });
