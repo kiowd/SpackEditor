@@ -1,4 +1,83 @@
 // Add comments to explain what this function does. You're meant to use Google!
+function mood() {
+  let isHappy = true;
+
+  if (!isHappy) {
+    return "I am happy";
+  } else {
+    return "I am not happy";
+  }
+}
+
+function greaterThan10() {
+  let num = 10;
+  let isBigEnough = num;
+
+  if (isBigEnough) {
+    return "num is greater than or equal to 10";
+  } else {
+    return "num is not big enough";
+  }
+    
+}
+
+
+function sortArray() {
+  let letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters = letters.sort();
+console.log(typeof sortedLetters);
+  return sortedLetters;
+}
+console.log(sortArray());
+  
+function first5() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let sliced = numbers.slice(0,5);
+
+  return sliced;
+}
+console.log(first5());
+function get3rdIndex(arr) {
+  let index = 3;
+  let element = arr[index];
+
+  return element;
+}
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+function test(test_name, expr) {
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
+}
+
+test("mood function works", mood() === "I am not happy");
+test(
+  "greaterThanTen function works",
+  greaterThan10() === "num is greater than or equal to 10"
+);
+test(
+  "sortArray function works",
+  sortArray() === ["a", "c", "e", "f", "n", "z"]
+);
+test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+
+test(
+  "get3rdIndex function works - case 1",
+  get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]) ===
+  "strawberry"
+);
+test(
+  "get3rdIndex function works - case 2",
+  get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
+);
+
 function getNumber() {
   let pick_random = Math.floor(Math.random() * 4) + 1;  // returns a random integer from 1 to 10
   /*let rounded = Math.floor(pick_random);
@@ -127,7 +206,7 @@ function shakeBall() {
 // - very negative
 function checkAnswer(answer) {
   switch (answer) {
-    case "very positive":
+    case (randomNumber = 1):
      /* It is certain.
       It is decidedly so.
       Without a doubt.
@@ -301,3 +380,8 @@ function test(test_name, expr) {
 
 test('convertToUSD function works', convertToUSD(32) === 44.8)
 test('convertToBRL function works', convertToBRL(30) === 172.71)
+
+
+console.log(NaN==undefined);
+console.log(null>=0);
+console.log(null<=0);
